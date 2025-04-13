@@ -1,3 +1,21 @@
+---
+name: Generate Llm Usecases
+description: A prompt that generates categorized LLM use cases for specific industries.
+authors:
+  - Rafferty Uy
+model:
+  api: chat
+  configuration:
+    type: azure_openai
+    azure_endpoint: ${env:AZURE_OPENAI_ENDPOINT}
+    azure_deployment: <your-deployment>
+    api_version: 2024-07-01-preview
+  parameters:
+    max_tokens: 4096
+sample:
+  industry: Healthcare
+---
+system:
 Suggest use cases where LLM like OpenAI can be used based on the industry specified.
 Categorize the use cases into: Content Creation, Summarization, Code Generation, Semantic Search.
 Generate 5 use cases per category.
@@ -29,10 +47,10 @@ Code Generation
 Semantic Search
 - Search and ask your marketing data
 - Perform semantic searches with any supported language
-- Find marketing materials related to a company’s products and services
+- Find marketing materials related to a company's products and services
 - Search customer reviews
 
 ## Actual
-Industry: {industry}
+Industry: {{industry}}
 
 ### Use Cases

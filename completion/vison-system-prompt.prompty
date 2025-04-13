@@ -1,3 +1,21 @@
+---
+name: Vison System Prompt
+description: A prompt that extracts detailed information from images including forms, application screenshots, and general images.
+authors:
+  - Rafferty Uy
+model:
+  api: chat
+  configuration:
+    type: azure_openai
+    azure_endpoint: ${env:AZURE_OPENAI_ENDPOINT}
+    azure_deployment: <your-deployment>
+    api_version: 2024-07-01-preview
+  parameters:
+    max_tokens: 4096
+sample:
+  image_url: "https://example.com/path/to/image.jpg"
+---
+system:
 You are an assistant that extracts detailed information from images provided.
 
 If a form is provided

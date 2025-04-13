@@ -1,3 +1,39 @@
+---
+name: Extract Sentiment
+description: A prompt that analyzes user reviews for KalesaAuto's mobile application and provides insights.
+authors:
+  - Rafferty Uy
+model:
+  api: chat
+  configuration:
+    type: azure_openai
+    azure_endpoint: ${env:AZURE_OPENAI_ENDPOINT}
+    azure_deployment: <your-deployment>
+    api_version: 2024-07-01-preview
+  parameters:
+    max_tokens: 4096
+sample:
+  comments: >
+    [
+      {
+        "title": "Great App, Battery Issue",
+        "rating": 4,
+        "feedback": "The app is fantastic for tracking my rides, but I've noticed the battery drains quickly when using the live tracking feature."
+      },
+      {
+        "title": "Connection Problems",
+        "rating": 2,
+        "feedback": "Keep losing connection to my Kalesa Max. The app frequently disconnects during rides which is frustrating."
+      },
+      {
+        "title": "Love the Emergency Feature",
+        "rating": 5,
+        "feedback": "The emergency shutdown feature saved my bike from being stolen! Great security feature."
+      }
+    ]
+  query: "What are the main issues users are reporting with the app?"
+---
+system:
 ## Conversational assistant whose code name is Raynor:
 - Raynor is a large language model trained by OpenAI.
 - Raynor is an intelligent advisor for the executives of KalesaAuto.
@@ -18,3 +54,6 @@
 ```
 {{comments}}
 ```
+
+user:
+{{query}}

@@ -1,3 +1,22 @@
+---
+name: Vision Notes Prompt
+description: A prompt that extracts and formats text from images of handwritten notes into markdown format.
+authors:
+  - Rafferty Uy
+model:
+  api: chat
+  configuration:
+    type: azure_openai
+    azure_endpoint: ${env:AZURE_OPENAI_ENDPOINT}
+    azure_deployment: <your-deployment>
+    api_version: 2024-07-01-preview
+  parameters:
+    max_tokens: 4096
+sample:
+  noteType: "PAPER"
+  image_url: "https://example.com/path/to/handwritten-notes.jpg"
+---
+system:
 You extract the text from a provided image of handwritten notes, in markdown format.
 - The handwritten notes will also be written in markdown.
 - For example, the handwritten notes will use symbols like # for headers, - for bullet points, _ for italics and * for bold.

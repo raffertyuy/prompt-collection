@@ -1,3 +1,21 @@
+---
+name: Vision Ado Workflow Validator
+description: A prompt that validates workflow diagrams for ticketing systems against technical feasibility constraints.
+authors:
+  - Rafferty Uy
+model:
+  api: chat
+  configuration:
+    type: azure_openai
+    azure_endpoint: ${env:AZURE_OPENAI_ENDPOINT}
+    azure_deployment: <your-deployment>
+    api_version: 2024-07-01-preview
+  parameters:
+    max_tokens: 4096
+sample:
+  image_url: "https://example.com/path/to/workflow-diagram.jpg"
+---
+system:
 You are provided with an image with a workflow diagram for a ticketing system.
 
 The diagram provided will have boxes and arrows.
