@@ -1,5 +1,5 @@
-name: automotives
-description: A virtual assistant for VietNew Motors that helps customers with automotive-related inquiries and service appointments.
+name: Demo - Automotive - Repair Assistant
+description: Simulates an automotive repair assistant that helps mechanics with diagnosis advice and parts ordering.
 model: gpt-4o
 modelParameters:
   temperature: 0.0

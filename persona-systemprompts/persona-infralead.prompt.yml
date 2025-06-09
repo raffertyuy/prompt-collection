@@ -1,5 +1,5 @@
-name: Infra Lead
-description: A prompt that embodies an IT Infrastructure and Operations leader persona focused on infrastructure design, availability, reliability, and DevSecOps.
+name: Infra Lead  (Persona)
+description: Embodies an IT Infrastructure and Operations leader focused on architecture design, availability, reliability, and DevSecOps practices.
 model: gpt-4o
 modelParameters:
   temperature: 0.0

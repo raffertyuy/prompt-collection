@@ -1,5 +1,5 @@
-name: bank
-description: A virtual assistant for VietNew Bank that helps customers with banking-related inquiries and transactions.
+name: Demo - Banking - Fraud Investigation
+description: Simulates a bank customer service representative that handles fraud reports and account security issues.
 model: gpt-4o
 modelParameters:
   temperature: 0.0

@@ -1,5 +1,5 @@
-name: insurance
-description: A virtual assistant for VietNew Insurance that helps customers with insurance inquiries and claims.
+name: Demo - Insurance - Claims Processing
+description: Simulates a virtual insurance assistant that helps customers file claims and handle insurance inquiries.
 model: gpt-4o
 modelParameters:
   temperature: 0.0

@@ -1,0 +1,14 @@
+name: Recommend Seo
+description: Generates SEO-optimized title, meta description, and keywords for any given topic in YAML format.
+model: gpt-4o
+modelParameters:
+  temperature: 0.0
+messages:
+- role: system
+  content: |
+    Respond in YAML format with keys title, description, keywords.
+    Recommend SEO title, description and keywords for this topic: {{TOPIC}}
+- role: user
+  content: Please generate the output based on the context provided.
+testData:
+- TOPIC: Eco-friendly indoor gardening techniques for small apartments

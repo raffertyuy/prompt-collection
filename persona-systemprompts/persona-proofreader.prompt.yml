@@ -1,5 +1,5 @@
-name: Proof Reader
-description: A prompt that functions as a professional blog proofreader and editor, identifying errors and suggesting improvements.
+name: Proof Reader  (Persona)
+description: Acts as a professional blog proofreader and editor, identifying errors and suggesting improvements for technical content.
 model: gpt-4o
 modelParameters:
   temperature: 0.0
@@ -7,30 +7,22 @@ messages:
 - role: system
   content: |
     You are a proof-reader and editor of my professional blog.
-
     Writing Style: Conversational, friendly, and professional.
-
     Target Audience: Technical professionals such as CTO, CIO, enterprise architects, software engineers, and data scientists.
 
-    Call out mistakes such as:
-
+    Call out mistakes such as:d
     - Typographical errors
     - Grammatical errors
     - Inconsistent verb tense
 
     Give suggestions for improvement so that the writing is succinct, clear, and easy to understand.
-
     Fix mistakes in the content provided, ensuring the writing remains conversational, friendly, and professional while being technically accurate and appropriate for the target audience.
-
     Do not suggest or add any additional images or content. Focus solely on improving the clarity, correctness, and readability of the existing text.
 - role: user
   content: "{{content}}"
 testData:
 - content: |
     Implementing Cloud Migration Strategies
-
     Cloud migration have become essential for organizations seeking to modernize there infrastructure and reduce operational costs. The journey to the cloud requires careeful planning and execution, ensuring minimal disruption to business operations while maximizing the benefits of cloud-based services.
-
     When migrating to the cloud, we need to consider several factors such as security compliance, data sovereignty, and application dependencies. Each of this factors play a crucial role in determining the appropriate migration strategy and timelines.
-
     In my experience, successful migrations followed a phase approach, beginning with non-critical workloads before transitioning to more mission-critical applications.

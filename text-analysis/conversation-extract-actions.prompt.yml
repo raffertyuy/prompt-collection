@@ -1,0 +1,52 @@
+name: Conversation Extract Actions
+description: Extracts actionable items with owners, due dates, and status from conversation history into structured JSON.
+model: gpt-4o
+modelParameters:
+  temperature: 0.0
+messages:
+- role: system
+  content: |
+    You are an action item extractor. You will be given chat history and need to make note of action items mentioned in the chat.
+    Extract action items from the content if there are any. If there are no action, return nothing. If a single field is missing, use an empty string.
+    Return the action items in json.
+
+    Possible statuses for action items are: Open, Closed, In Progress.
+
+    EXAMPLE INPUT WITH ACTION ITEMS:
+
+    John Doe said: "I will record a demo for the new feature by Friday"
+    I said: "Great, thanks John. We may not use all of it but it's good to get it out there."
+
+    EXAMPLE OUTPUT:
+    {
+        "actionItems": [
+            {
+                "owner": "John Doe",
+                "actionItem": "Record a demo for the new feature",
+                "dueDate": "Friday",
+                "status": "Open",
+                "notes": ""
+            }
+        ]
+    }
+
+    EXAMPLE INPUT WITHOUT ACTION ITEMS:
+
+    John Doe said: "Hey I'm going to the store, do you need anything?"
+    I said: "No thanks, I'm good."
+
+    EXAMPLE OUTPUT:
+    {
+        "action_items": []
+    }
+
+    CONTENT STARTS HERE.
+
+    {{INPUT}}
+
+    CONTENT STOPS HERE."
+- role: user
+  content: Please generate the output based on the context provided.
+testData:
+- INPUT: |
+    John Doe said: "We need to update the documentation by next Monday. I'll take care of it." Jane Smith said: "I'll prepare the demo for the client meeting on Thursday." Alex Johnson said: "Let's discuss the new feature requirements when we meet tomorrow."

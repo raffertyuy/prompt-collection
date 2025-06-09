@@ -1,5 +1,5 @@
-name: airlines
-description: A virtual assistant for VietNew Airlines that helps customers with airline-related inquiries and luggage issues.
+name: Demo - Airlines - Luggage Support
+description: Simulates an airline customer service assistant that helps with luggage tracking and compensation offers.
 model: gpt-4o
 modelParameters:
   temperature: 0.0

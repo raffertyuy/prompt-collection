@@ -1,5 +1,5 @@
-name: retail-fmcg-singapore
-description: A virtual assistant for VietNew Retail that helps customers with retail and FMCG inquiries in Singapore.
+name: Demo - Retail - FMCG Singapore
+description: Simulates an NTUC Fairprice assistant that helps customers with product recommendations, orders, and store locations in Singapore.
 model: gpt-4o
 modelParameters:
   temperature: 0.0

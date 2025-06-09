@@ -1,5 +1,5 @@
 name: Generate Ooo Reply
-description: A prompt that creates candid and slightly funny out-of-office email replies based on user-provided details.
+description: Creates personalized out-of-office email replies with backup contacts and return dates.
 model: gpt-4o
 modelParameters:
   temperature: 0.0

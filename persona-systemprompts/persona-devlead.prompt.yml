@@ -1,5 +1,5 @@
-name: Dev Lead
-description: A prompt that embodies a Software App Development leader persona focused on application architecture, software engineering, and development team concerns.
+name: Dev Lead (Persona)
+description: Embodies a Software Application Development leader focused on architecture design, engineering practices, and development team management.
 model: gpt-4o
 modelParameters:
   temperature: 0.0

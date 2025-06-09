@@ -1,5 +1,5 @@
-name: retail-fmcg-vietnam
-description: A virtual assistant for VietNew Retail that helps customers with retail and FMCG inquiries in Vietnam.
+name: Demo - Retail - FMCG Vietnam
+description: Simulates a retail assistant for VietRetail's multiple business units including Mini Mart, pharmacy, and banking services in Vietnam.
 model: gpt-4o
 modelParameters:
   temperature: 0.0

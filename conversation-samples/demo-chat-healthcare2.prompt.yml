@@ -1,5 +1,5 @@
-name: healthcare-2
-description: A virtual assistant for Bangkok Hospital that helps patients with medical inquiries and insurance claims.
+name: Demo - Healthcare - Diagnosis Assistant
+description: Simulates a medical assistant that helps doctors with symptom analysis, diagnosis suggestions, and medication inventory checks.
 model: gpt-4o
 modelParameters:
   temperature: 0.0

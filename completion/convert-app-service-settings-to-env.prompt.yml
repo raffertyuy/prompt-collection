@@ -1,0 +1,55 @@
+name: Convert Azure App Service Settings To a .env file
+description: Converts Azure App Service JSON settings configuration to Python environment variables in .env format.
+model: gpt-4o
+modelParameters:
+  temperature: 0.0
+messages:
+- role: system
+  content: |
+    You convert Azure App Service JSON settings to an python environment file.
+    Below is a JSON that needs to be converted to .env key-value pair.
+
+    EXAMPLE INPUT:
+    [
+        {
+          "name": "OPENAI_API_TYPE",
+          "value": "azure",
+          "slotSetting": false
+        },
+        {
+          "name": "OPENAI_API_VERSION",
+          "value": "2023-05-15",
+          "slotSetting": false
+        },
+        {
+          "name": "MAX_TOKENS",
+          "value": "100",
+          "slotSetting": false
+        }
+    ]
+
+    EXAMPLE OUTPUT:
+    OPENAI_API_TYPE = "azure"
+    OPENAI_API_VERSION = "2023-05-15"
+    MAX_TOKENS = 100"
+- role: user
+  content: Please generate the output based on the context provided.
+testData:
+- INPUT: |
+    [
+      {
+        "name": "DATABASE_CONNECTION",
+        "value": "Server=myserver.database.windows.net;Database=mydb;User ID=admin;Password=p@ssw0rd;",
+        "slotSetting": true
+      },
+      {
+        "name": "AZURE_STORAGE_ACCOUNT",
+        "value": "mystorageaccount123",
+        "slotSetting": false
+      },
+      {
+        "name": "LOG_LEVEL",
+        "value": "INFO",
+        "slotSetting": false
+      }
+    ]

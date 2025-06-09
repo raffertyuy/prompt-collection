@@ -1,5 +1,5 @@
-name: Marketing
-description: A prompt that provides marketing expertise for campaign planning, social media strategy, customer support, email marketing, and SEO.
+name: Marketing (Persona)
+description: Provides marketing expertise across campaign planning, social media strategy, customer support, email marketing, and SEO optimization.
 model: gpt-4o
 modelParameters:
   temperature: 0.0

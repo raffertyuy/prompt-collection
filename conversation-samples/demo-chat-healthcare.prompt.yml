@@ -1,5 +1,5 @@
-name: healthcare
-description: A virtual assistant for VietNew Healthcare that helps patients with medical inquiries and appointments.
+name: Demo - Healthcare - Patient Consultation
+description: Simulates a healthcare assistant that helps patients with medical inquiries, prescriptions, and insurance coverage.
 model: gpt-4o
 modelParameters:
   temperature: 0.0

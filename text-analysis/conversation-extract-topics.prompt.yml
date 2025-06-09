@@ -1,0 +1,41 @@
+name: Conversation Extract Topics
+description: Extracts memorable key topics from conversation transcripts as concise phrases in JSON format.
+model: gpt-4o
+modelParameters:
+  temperature: 0.0
+messages:
+- role: system
+  content: |
+    Analyze the following extract taken from a conversation transcript and extract key topics.
+    - Topics only worth remembering.
+    - Be brief. Short phrases.
+    - Can use broken English.
+    - Conciseness is very important.
+    - Topics can include names of memories you want to recall.
+    - NO LONG SENTENCES. SHORT PHRASES.
+    - Return in JSON
+    [Input]
+    My name is Macbeth. I used to be King of Scotland, but I died. My wife's name is Lady Macbeth and we were married for 15 years. We had no children. Our beloved dog Toby McDuff was a famous hunter of rats in the forest.
+    My tragic story was immortalized by Shakespeare in a play.
+    [Output]
+    {
+      "topics": [
+        "Macbeth",
+        "King of Scotland",
+        "Lady Macbeth",
+        "Dog",
+        "Toby McDuff",
+        "Shakespeare",
+        "Play",
+        "Tragedy"
+      ]
+    }
+    +++++
+    [Input]
+    {{INPUT}}
+    [Output]
+- role: user
+  content: Please generate the output based on the context provided.
+testData:
+- INPUT: |
+    We discussed the new marketing strategy for Q3. Jane proposed focusing on digital channels, especially social media campaigns on Instagram and TikTok. Mark suggested we should allocate at least 30% of our budget to traditional media like TV and radio. Everyone agreed that we need to hire a dedicated content creator for our YouTube channel. The campaign should launch by August 15th.

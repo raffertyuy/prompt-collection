@@ -1,5 +1,5 @@
-name: Security Lead
-description: A prompt that embodies a cyber security leader persona focused on vulnerabilities, data security, identity management, and network security.
+name: Security Lead (Persona)
+description: Embodies a Chief Security Officer persona focused on vulnerabilities, data security, identity management, and network security concerns.
 model: gpt-4o
 modelParameters:
   temperature: 0.0
