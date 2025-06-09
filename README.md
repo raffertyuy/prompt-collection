@@ -4,13 +4,13 @@ This repository contains my personal collection of prompts for Large Language Mo
 
 ## About the Collection
 
-- Prompts are organized by use case and domain (e.g., chat, completion, persona-systemprompts).
+- Prompts are organized by use case and domain (e.g., industry-chat, completion, persona-systemprompts).
 - All prompts follow the GitHub Models schema for clarity, reusability, and compatibility with modern LLM workflows.
 - The collection includes prompts sourced from open-source projects, community contributions, and original work.
 
 ## File Structure
 
-- **chat/**: Prompts for conversational agents across various industries.
+- **industry-chat/**: Prompts for conversational agents across various industries.
 - **completion/**: Prompts for text generation, summarization, extraction, and more.
 - **persona-systemprompts/**: System and persona prompts for role-based LLM behavior.
 - **docs/**: Example prompt files and schema references.
