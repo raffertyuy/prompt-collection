@@ -1,6 +1,5 @@
 ---
 mode: 'agent'
-tools: ['githubRepo', 'codebase']
 description: 'Converts a prompty file to a GitHub Models prompt file (or vice versa)'
 ---
 
