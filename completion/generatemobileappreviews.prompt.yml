@@ -1,8 +1,8 @@
 name: Generate Mobile App Reviews
 description: A prompt that generates mixed reviews for KalesaAuto's My Kalesa mobile application in JSON format.
-model: gpt-4o-mini
+model: gpt-4o
 modelParameters:
-  max_tokens: 4096
+  temperature: 0.0
 messages:
 - role: system
   content: 'KalesaAuto is a smart motorcycle manufacturer and retailer.

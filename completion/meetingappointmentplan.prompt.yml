@@ -1,8 +1,8 @@
 name: Meeting Appointment Plan
 description: A prompt that creates step-by-step meeting scheduling plans using specific available functions.
-model: gpt-4o-mini
+model: gpt-4o
 modelParameters:
-  max_tokens: 4096
+  temperature: 0.0
 messages:
 - role: system
   content: 'You are an assistant who helps people set appointments and book the necessary location for this meeting. The location could be virtual, via Microsoft Teams.

@@ -1,8 +1,8 @@
 name: Generate Llm Usecases
 description: A prompt that generates categorized LLM use cases for specific industries.
-model: gpt-4o-mini
+model: gpt-4o
 modelParameters:
-  max_tokens: 4096
+  temperature: 0.0
 messages:
 - role: system
   content: 'Suggest use cases where LLM like OpenAI can be used based on the industry specified.

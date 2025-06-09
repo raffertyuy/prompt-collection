@@ -1,8 +1,8 @@
 name: Recommend Seo
 description: A prompt that generates SEO title, description, and keywords for a given topic in YAML format.
-model: gpt-4o-mini
+model: gpt-4o
 modelParameters:
-  max_tokens: 4096
+  temperature: 0.0
 messages:
 - role: system
   content: "Respond in YAML format with keys title, description, keywords. \nRecommend SEO title, description and keywords for this topic: {{TOPIC}}"

@@ -1,8 +1,8 @@
 name: Convert Env To Appservicesettings
 description: A prompt that converts Python environment variables to Azure App Service JSON settings format.
-model: gpt-4o-mini
+model: gpt-4o
 modelParameters:
-  max_tokens: 4096
+  temperature: 0.0
 messages:
 - role: system
   content: "You convert python environment variables to Azure App Service JSON settings.\nBelow is a key-value pair that needs to be converted to JSON.\nThe output is a prettified format of JSON.\n\nEXAMPLE INPUT:\n# AzureOpenAI loads these variables\nOPENAI_API_TYPE = \"azure\"\nOPENAI_API_VERSION = \"2023-05-15\"\n\n# GPT model config\nMAX_TOKENS = 100\n\nEXAMPLE OUTPUT:\n[\n    {\n      \"name\": \"OPENAI_API_TYPE\",\n      \"value\": \"azure\",\n      \"slotSetting\": false\n    },\n    {\n      \"name\": \"OPENAI_API_VERSION\",\n      \"value\": \"2023-05-15\",\n      \"slotSetting\": false\n    },\n    {\n      \"name\": \"MAX_TOKENS\",\n      \"value\": \"100\",\n      \"slotSetting\": false\n    }\n]"

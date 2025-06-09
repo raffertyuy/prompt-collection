@@ -1,8 +1,8 @@
 name: Extract Sentiment
 description: A prompt that analyzes user reviews for KalesaAuto's mobile application and provides insights.
-model: gpt-4o-mini
+model: gpt-4o
 modelParameters:
-  max_tokens: 4096
+  temperature: 0.0
 messages:
 - role: system
   content: '## Conversational assistant whose code name is Raynor:

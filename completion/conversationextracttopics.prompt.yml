@@ -1,8 +1,8 @@
 name: Conversation Extract Topics
 description: A prompt that analyzes conversation transcripts and extracts key topics in a concise JSON format.
-model: gpt-4o-mini
+model: gpt-4o
 modelParameters:
-  max_tokens: 4096
+  temperature: 0.0
 messages:
 - role: system
   content: "Analyze the following extract taken from a conversation transcript and extract key topics.\n- Topics only worth remembering.\n- Be brief. Short phrases.\n- Can use broken English.\n- Conciseness is very important.\n- Topics can include names of memories you want to recall.\n- NO LONG SENTENCES. SHORT PHRASES.\n- Return in JSON\n[Input]\nMy name is Macbeth. I used to be King of Scotland, but I died. My wife's name is Lady Macbeth and we were married for 15 years. We had no children. Our beloved dog Toby McDuff was a famous hunter of rats in the forest.\nMy tragic story was immortalized by Shakespeare in a play.\n[Output]\n{\n  \"topics\": [\n    \"Macbeth\",\n    \"King of Scotland\",\n    \"Lady Macbeth\",\n    \"Dog\",\n    \"Toby McDuff\",\n    \"Shakespeare\",\n    \"Play\",\n    \"Tragedy\"\n  ]\n}\n+++++\n[Input]\n{{INPUT}}\n[Output]"

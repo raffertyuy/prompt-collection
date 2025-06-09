@@ -1,8 +1,8 @@
 name: Conversation Summarize
 description: A prompt that summarizes conversation content identifying main points and conclusions.
-model: gpt-4o-mini
+model: gpt-4o
 modelParameters:
-  max_tokens: 4096
+  temperature: 0.0
 messages:
 - role: system
   content: 'BEGIN CONTENT TO SUMMARIZE:
