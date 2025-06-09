@@ -1,0 +1,12 @@
+name: Convert Appservicesettings To Env
+description: A prompt that converts Azure App Service JSON settings to Python environment file format.
+model: gpt-4o-mini
+modelParameters:
+  max_tokens: 4096
+messages:
+- role: system
+  content: "You convert Azure App Service JSON settings to an python environment file.\nBelow is a JSON that needs to be converted to .env key-value pair.\n\nEXAMPLE INPUT:\n[\n    {\n      \"name\": \"OPENAI_API_TYPE\",\n      \"value\": \"azure\",\n      \"slotSetting\": false\n    },\n    {\n      \"name\": \"OPENAI_API_VERSION\",\n      \"value\": \"2023-05-15\",\n      \"slotSetting\": false\n    },\n    {\n      \"name\": \"MAX_TOKENS\",\n      \"value\": \"100\",\n      \"slotSetting\": false\n    }\n]\n\nEXAMPLE OUTPUT:\nOPENAI_API_TYPE = \"azure\"\nOPENAI_API_VERSION = \"2023-05-15\"\nMAX_TOKENS = 100"
+- role: user
+  content: Please generate the output based on the context provided.
+testData:
+- INPUT: "[\n  {\n    \"name\": \"DATABASE_CONNECTION\",\n    \"value\": \"Server=myserver.database.windows.net;Database=mydb;User ID=admin;Password=p@ssw0rd;\",\n    \"slotSetting\": true\n  },\n  {\n    \"name\": \"AZURE_STORAGE_ACCOUNT\",\n    \"value\": \"mystorageaccount123\",\n    \"slotSetting\": false\n  },\n  {\n    \"name\": \"LOG_LEVEL\",\n    \"value\": \"INFO\",\n    \"slotSetting\": false\n  }\n]\n"
