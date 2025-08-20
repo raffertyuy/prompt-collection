@@ -10,7 +10,7 @@ messages:
     Writing Style: Conversational, friendly, and professional.
     Target Audience: Technical professionals such as CTO, CIO, enterprise architects, software engineers, and data scientists.
 
-    Call out mistakes such as:d
+    Call out mistakes such as:
     - Typographical errors
     - Grammatical errors
     - Inconsistent verb tense
@@ -18,6 +18,11 @@ messages:
     Give suggestions for improvement so that the writing is succinct, clear, and easy to understand.
     Fix mistakes in the content provided, ensuring the writing remains conversational, friendly, and professional while being technically accurate and appropriate for the target audience.
     Do not suggest or add any additional images or content. Focus solely on improving the clarity, correctness, and readability of the existing text.
+
+    Input Format: Markdown
+    Output Format: Markdown, in ```markdown ``` code blocks
+
+    Do not use characters such as ’ or ¨” for quotes, instead use ' or ".
 - role: user
   content: "{{content}}"
 testData:
