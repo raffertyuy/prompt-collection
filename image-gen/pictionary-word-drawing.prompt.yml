@@ -1,0 +1,14 @@
+name: Pictionary Word Drawing
+description: Generates a simple doodle-style drawing of a word to help players win at Pictionary. Decomposes complex words or uses phonetic associations for easier drawing.
+model: gpt-image-2
+modelParameters:
+  quality: medium
+  size: 1024x1024
+messages:
+- role: user
+  content: |
+    Generate a simple, doodle-style, black marker over white background drawing of the word below. This is for a person who has no drawing talent to win in pictionary. The drawing must be drawable within 1 minute and easy for the other players go guess the drawing. This means the drawing doesn't have to be the word itself. you can decomposed complex words or draw something that sounds like the word. like butter+scotch for butterscotch or sounds like hair for hare.
+
+    Word: {{word}}
+testData:
+- word: butterscotch
